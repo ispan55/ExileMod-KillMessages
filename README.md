@@ -14,7 +14,7 @@ Installation
 * Move the `custom` folder into your Mission PBO.
 * Open your `initPlayerLocal.sqf`.
 * add `[] execVM "custom\KillMessages.sqf";` to the very top.
-* Open your `ExileServer_object_player_event_onMpKilled` in your server PBO.
+* Open your `ExileServer_object_player_event_onMpKilled.sqf` in your server PBO.
 * Look for 
 ```
 _killer setVariable ["ExileScore", _newKillerScore];
