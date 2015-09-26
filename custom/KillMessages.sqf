@@ -9,7 +9,7 @@
 ShowDynamicText = true; // Show Kills Top Left of the Screen with all the custom colors and styles.
 halvStyle = true; // If This ShowDynamicText is True., It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
 
-ShowHintText = true; // show Kill Message on the Top Mid Of the Screen. Will not show custom Color added Below.
+ShowHintText = true; // show Kill Message on the Top Mid Of the Screen
 
 // The color codes you see here are called Hex Codes - If you wish to pick another color see here :
 //  http://www.color-hex.com/
@@ -52,7 +52,24 @@ if (!isDedicated) then {
 				];
 				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
 				if (ShowHintText) then {
-					_message = format["%1 was killed by a %2 with %3 from %4m",_victimName,_killerName,_weapon,_distance];
+					_message = parseText format ["
+						<t size='0.45'align='left'shadow='1'color='%5'>%1</t>
+						<t size='0.45'align='left'shadow='1'>  Killed  </t>
+						<t size='0.45'align='left'shadow='1'color='%6'>%2</t>
+						<t size='0.45'align='left'shadow='1'> With </t>
+						<t size='0.45'align='left'shadow='1'color='%7'>%3</t>
+						<t size='0.45'align='left'shadow='1'> from </t>
+						<t size='0.45'align='left'shadow='1'color='%8'>%4m</t><br/>
+						",
+						_killerName,
+						_victimName,
+						_weapon,
+						_distance,
+						KillerNameColor,
+						VictimNameColor,
+						WeaponNameColor,
+						DistanceColor
+					];
 					hintSilent _message;
 				};
 			};
@@ -79,7 +96,24 @@ if (!isDedicated) then {
 				];
 				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
 				if (ShowHintText) then {
-					_message = format["%1 was killed by a %2 with %3 from %4m",_victimName,_killerName,_weapon,_distance];
+					_message = parseText format ["
+						<t size='0.45'align='left'shadow='1'color='%5'>%1</t>
+						<t size='0.45'align='left'shadow='1'>  Killed  </t>
+						<t size='0.45'align='left'shadow='1'color='%6'>%2</t>
+						<t size='0.45'align='left'shadow='1'> With </t>
+						<t size='0.45'align='left'shadow='1'color='%7'>%3</t>
+						<t size='0.45'align='left'shadow='1'> from </t>
+						<t size='0.45'align='left'shadow='1'color='%8'>%4m</t><br/>
+						",
+						_killerName,
+						_victimName,
+						_weapon,
+						_distance,
+						KillerNameColor,
+						VictimNameColor,
+						WeaponNameColor,
+						DistanceColor
+					];
 					hintSilent _message;
 				};
 			};
@@ -93,7 +127,24 @@ if (!isDedicated) then {
 			_victimName = _id select 2;
 			_distance 	= _id select 3;
 			_weapon 	= _id select 4;
-			_message = format["%1 was killed by a %2 with %3 from %4m",_victimName,_killerName,_weapon,_distance];
+			_message = parseText format ["
+				<t size='0.45'align='left'shadow='1'color='%5'>%1</t>
+				<t size='0.45'align='left'shadow='1'>  Killed  </t>
+				<t size='0.45'align='left'shadow='1'color='%6'>%2</t>
+				<t size='0.45'align='left'shadow='1'> With </t>
+				<t size='0.45'align='left'shadow='1'color='%7'>%3</t>
+				<t size='0.45'align='left'shadow='1'> from </t>
+				<t size='0.45'align='left'shadow='1'color='%8'>%4m</t><br/>
+				",
+				_killerName,
+				_victimName,
+				_weapon,
+				_distance,
+				KillerNameColor,
+				VictimNameColor,
+				WeaponNameColor,
+				DistanceColor
+			];
 			hintSilent _message;
 		};
 	};
