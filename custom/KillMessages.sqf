@@ -9,7 +9,7 @@
 ShowDynamicText = true; // Show Kills Top Left of the Screen with all the custom colors and styles.
 halvStyle = true; // If This ShowDynamicText is True., It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
 
-ShowTitleText = true; // show Kill Message on the Bottom Mid Of the Screen. Will not show custom Color added Below.
+ShowHintText = true; // show Kill Message on the Bottom Mid Of the Screen. Will not show custom Color added Below.
 
 // The color codes you see here are called Hex Codes - If you wish to pick another color see here :
 //  http://www.color-hex.com/
@@ -51,6 +51,10 @@ if (!isDedicated) then {
 				DistanceColor
 				];
 				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
+				if (ShowHintText) then {
+					_message = format["%1 was killed by a %2 with %3 from %4m",_victimName,_killerName,_weapon,_distance];
+					hintSilent _message;
+				};
 			};
 		} else {
 			"Gr8s_kill_msg"		addPublicVariableEventHandler {
@@ -74,10 +78,14 @@ if (!isDedicated) then {
 				DistanceColor
 				];
 				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
+				if (ShowHintText) then {
+					_message = format["%1 was killed by a %2 with %3 from %4m",_victimName,_killerName,_weapon,_distance];
+					hintSilent _message;
+				};
 			};
 		};
 	};
-	if (ShowTitleText) then {
+	if ((ShowHintText) && !(ShowDynamicText)) then {
 		"Gr8s_kill_msg"		addPublicVariableEventHandler {
 			_id = (_this select 1);
 			_killerName = _id select 0;
@@ -86,7 +94,7 @@ if (!isDedicated) then {
 			_distance 	= _id select 3;
 			_weapon 	= _id select 4;
 			_message = format["%1 was killed by a %2 with %3 from %4m",_victimName,_killerName,_weapon,_distance];
-			titleText [_message, "PLAIN"];
+			hintSilent _message;
 		};
 	};
 };
