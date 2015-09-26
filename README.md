@@ -1,7 +1,7 @@
 Kill Messages By GR8
 =============
 
-Beautiful Kill Messages Notfications with lots of options. Eye Apealing and made for bragging for good kills.
+Beautiful Kill Messages Notifications with lots of options. Eye Apealing and made for bragging for good kills.
 
 Installation
 --------------------------
