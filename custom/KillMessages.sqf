@@ -17,10 +17,10 @@ ShowTitleText = false; // show Kill Message on the Bottom Mid Of the Screen. Wil
 //  http://www.color-hex.com/
 // Then Copy the color code including '#' and must be 6 characters.
 
-KillerNameColor	 = "#5882FA" // Text Color of the Killer's Name.
-VictimNameColor	 = "#C70000" // Text Color of the Victim's Name.
-WeaponNameColor	 = "#FFCC00" // Text Color of the Weapon's Name. Only Works in Halv's Style
-DistanceColor	 = "#FFCC00" // Text Color of the kill Distance number.
+KillerNameColor	 = "#5882FA"; // Text Color of the Killer's Name.
+VictimNameColor	 = "#C70000"; // Text Color of the Victim's Name.
+WeaponNameColor	 = "#FFCC00"; // Text Color of the Weapon's Name. Only Works in Halv's Style
+DistanceColor	 = "#FFCC00"; // Text Color of the kill Distance number.
 
 if (!isDedicated) then {
 	if (ShowDynamicText) then {
