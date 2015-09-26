@@ -88,6 +88,7 @@ if (!isDedicated) then {
 			_distance 	= _id select 3;
 			_weapon 	= _id select 4;
 			_message = format["%1 was killed by a %2 with %3 from %4m",_victimName,_killerName,_weapon,_distance];
+			titleText [_message, "PLAIN"];
 		};
 	};
 };
