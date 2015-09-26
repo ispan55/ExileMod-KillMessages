@@ -17,10 +17,17 @@ Installation
 * Open your `ExileServer_object_player_event_onMpKilled` in your server PBO.
 * Look for 
 ```
+_killer setVariable ["ExileScore", _newKillerScore];
+format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
 _killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
 ```
 * Replace it with this:
 ```
+_killer setVariable ["ExileScore", _newKillerScore];
+_weapon = currentWeapon _killer;
+_txt = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'displayName'));
+_pic = (gettext (configFile >> 'cfgWeapons' >> _weapon >> 'picture'));
+format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
 _killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
 
 // Kill Messages By GR8				
