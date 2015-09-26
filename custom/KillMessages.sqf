@@ -1,7 +1,7 @@
 /*
 	KILL MESSAGES
 	BY GR8
-	v0.9
+	v1.1
 */
 
 
