@@ -5,7 +5,7 @@ Beautiful Kill Messages Notifications with lots of options. Eye Apealing and mad
 
 Media
 --------------------------
-COMING SOON
+![Screenshot](http://images.akamai.steamusercontent.com/ugc/429322699324005810/2BFB9BAC63309475F9C2391B9CB25DBFB4A067BC/)
 
 Installation
 --------------------------
