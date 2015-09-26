@@ -6,12 +6,10 @@
 
 
 /* CONFIG */
-ShowPlayerKills = true; // Show Player to Player Kills
-ShowAIKills = true; // Show AI to player Kills
 ShowDynamicText = true; // Show Kills Top Left of the Screen with all the custom colors and styles.
-halvStyle = true; // This will use the awesome style made by halv, If false then you will see a style made by me.
+halvStyle = true; // If This ShowDynamicText is True., It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
 
-ShowTitleText = false; // show Kill Message on the Bottom Mid Of the Screen. Will not show custom Color added Below.
+ShowTitleText = true; // show Kill Message on the Bottom Mid Of the Screen. Will not show custom Color added Below.
 
 // The color codes you see here are called Hex Codes - If you wish to pick another color see here :
 //  http://www.color-hex.com/

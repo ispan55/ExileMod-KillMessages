@@ -25,18 +25,5 @@ if (ShowPlayerKills) then {
 	publicVariable "Gr8s_kill_msg";
 };
 ```
-* Look for 
-```
-_log = format["%1 was killed by an AI! (%2m Distance)", (name _victim), floor(_victim distance _killer)];
-```
-* Replace it with:
-```
-_log = format["%1 was killed by an AI! (%2m Distance)", (name _victim), floor(_victim distance _killer)];
 
-// Kill Messages By GR8	
-if (ShowAIKills) then {
-	Gr8s_kill_msg = ["AI", _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
-	publicVariable "Gr8s_kill_msg";
-};
-```
 * OPTIONAL : You can Check `KillMessages.sqf` in your custom folder to configure the settings.
