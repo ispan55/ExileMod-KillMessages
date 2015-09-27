@@ -10,6 +10,8 @@ halvStyle = true; // If This ShowDynamicText is True., It will use the awesome s
 
 ShowHintText = false; // show Kill Message on the Top Mid Of the Screen
 
+MessageDuration = 30; // Time in seconds the message stays on the screen.
+
 // The color codes you see here are called Hex Codes - If you wish to pick another color see here :
 //  http://www.color-hex.com/
 // Then Copy the color code including '#' and must be 6 characters.
@@ -49,7 +51,7 @@ if (!isDedicated) then {
 				WeaponNameColor,
 				DistanceColor
 				];
-				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
+				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],MessageDuration,0.5] spawn BIS_fnc_dynamicText;
 				if (ShowHintText) then {
 					_message = parseText format ["
 						<t color='%5'>%1</t>
@@ -94,7 +96,7 @@ if (!isDedicated) then {
 				VictimNameColor,
 				DistanceColor
 				];
-				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5] spawn BIS_fnc_dynamicText;
+				[_dyntxt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],MessageDuration,0.5] spawn BIS_fnc_dynamicText;
 				if (ShowHintText) then {
 					_message = parseText format ["
 						<t color='%5'>%1</t>
