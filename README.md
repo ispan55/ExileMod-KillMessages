@@ -5,7 +5,8 @@ Beautiful Kill Messages Notifications with lots of options. Eye Apealing and mad
 
 Media
 --------------------------
-![Screenshot](http://i.imgur.com/YCNRjiH.jpg)
+![Screenshot1](http://i.imgur.com/YCNRjiH.jpg)
+![Screenshot2](http://i.imgur.com/V91ZeBu.jpg)
 
 Installation
 --------------------------
