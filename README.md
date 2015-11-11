@@ -69,9 +69,10 @@ if (ShowAIKills) then {publicVariable "Gr8s_kill_msg";};
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [logGr8Kill]
-SQL1_1 = INSERT INTO kills SET killer_name = ?, killer_uid = ?, victim_name = ?, victim_uid = ?, weapon = ?, distance = ?, died_at = NOW()
-Number Of Inputs = 6
-SQL1_INPUTS = 1,2,3,4,5,6
+SQL1_1 = INSERT INTO kills SET killer_name = ?, killer_uid = ?, victim_name = ?, victim_uid = ?, weapon = ?, distance = ?, respect = ?, died_at = NOW()
+Number Of Inputs = 7
+SQL1_INPUTS = 1,2,3,4,5,6,7
+Return InsertID = true
 
 ```
 * Exucute `killfeed.sql` that came with the download into your database. (via PHPmyAdmin or HeidiSQL, etc)
