@@ -6,7 +6,17 @@
 
 /* CONFIG */
 ShowDynamicText = true; // Show Kills Top Left of the Screen with all the custom colors and styles.
-halvStyle = true; // If This ShowDynamicText is True., It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
+halvStyle = false; // If ShowDynamicText is True, It will use the awesome style made by halv, If halvStyle is false then you will see a style made by me. 
+
+ShowAIKills = true; // Show AI killing players messages.
+publicVariableServer "ShowAIKills";
+ShowPlayerKills = true; // Show players killing Players messages.
+publicVariableServer "ShowPlayerKills";
+
+LogAIKills = true; // Log AI killing players into the database.
+publicVariableServer "LogAIKills";
+LogPlayerKills = true; // Log Player killing players into the database.
+publicVariableServer "LogPlayerKills";
 
 ShowHintText = false; // show Kill Message on the Top Mid Of the Screen
 
