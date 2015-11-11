@@ -78,3 +78,11 @@ Return InsertID = true
 * Exucute `killfeed.sql` that came with the download into your database. (via PHPmyAdmin or HeidiSQL, etc)
 
 * OPTIONAL : You can Check `KillMessages.sqf` in your custom folder to configure the settings.
+
+Kill Feed
+--------------------------
+* With the latest update. Kills can now be logged in your database. Once you install/update this script. You will see Kill Logs In the `kills` table in your database. It will look something like this :
+![Database](http://i.imgur.com/H2njhNM.png)
+
+*This makes it easier to survailance your server or use this data to make a killboard on your website. Something like this :
+[`Example`](http://ghostzgamerz.com/pages/exilekills/)
