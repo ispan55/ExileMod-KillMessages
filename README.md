@@ -84,5 +84,5 @@ Kill Feed
 * With the latest update. Kills can now be logged in your database. Once you install/update this script. You will see Kill Logs In the `kills` table in your database. It will look something like this :
 ![Database](http://i.imgur.com/H2njhNM.png)
 
-*This makes it easier to survailance your server or use this data to make a killboard on your website. Something like this :
+* This makes it easier to survailance your server or use this data to make a killboard on your website. Something like this :
 [`Example`](http://ghostzgamerz.com/pages/exilekills/)
