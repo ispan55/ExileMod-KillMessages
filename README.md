@@ -86,3 +86,13 @@ Kill Feed
 
 * This makes it easier to survailance your server or use this data to make a killboard on your website. Something like this :
 [`Example`](http://ghostzgamerz.com/pages/exilekills/)
+Note : This webpage is not included with this script.
+
+BattlEye Filters
+--------------------------
+* Open up your `publicvariable.txt`
+* Add this in the end of line #2:
+```
+ !="ShowAIKills" !="ShowPlayerKills" !="LogAIKills" !="LogPlayerKills"
+```
+* There are more filters needed but thats what i had to do for my servers.
