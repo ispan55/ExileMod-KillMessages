@@ -1,4 +1,4 @@
-Kill Messages By GR8
+Kill Messages By GR8 ( Updated for Lime )
 =============
 
 Beautiful Kill Messages Notifications with lots of options. Eye Apealing and made for bragging for good kills.
@@ -18,8 +18,16 @@ Installation
 * Open your `ExileServer_object_player_event_onMpKilled.sqf` in your server PBO.
 * Look for 
 ```
-_killer setVariable ["ExileScore", _newKillerScore];
-format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
+private["_victim","_killer","_victimPosition","_addDeathStat","_addKillStat","_normalkill","_killerRespectPoints","_fragAttributes","_player","_grpvictim","_grpkiller","_log","_lastVictims","_victimUID","_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_flagNextToKiller","_homieBonus","_flagNextToVictim","_raidBonus","_overallRespectChange","_newKillerScore","_killMessage","_newKillerFrags","_newVictimDeaths"];
+```
+* Replace it with this :
+```
+private["_victim","_killer","_victimPosition","_addDeathStat","_addKillStat","_normalkill","_killerRespectPoints","_fragAttributes","_player","_grpvictim","_grpkiller","_log","_lastVictims","_victimUID",
+"_vehicleRole","_vehicle","_lastKillAt","_killStack","_distance","_distanceBonus","_flagNextToKiller","_homieBonus","_flagNextToVictim","_raidBonus","_overallRespectChange","_newKillerScore","_killMessage",
+"_newKillerFrags","_newVictimDeaths","_weapon","_txt","_pic"];
+```
+* Look for 
+```
 _killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
 ```
 * Replace it with this:
@@ -33,7 +41,6 @@ if (_pic == "") then {
 	_pic = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'picture'));
 	_txt = (getText (configFile >> 'cfgVehicles' >> _weapon >> 'displayName'));
 };
-format["setAccountScore:%1:%2", _newKillerScore,getPlayerUID _killer] call ExileServer_system_database_query_fireAndForget;
 _killMessage = format ["%1 was killed by %2", (name _victim), (name _killer)];
 
 Gr8s_kill_msg = [(name _killer), _pic, (name _victim), floor(_victim distance _killer), _txt, nil, nil];
